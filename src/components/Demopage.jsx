@@ -8,14 +8,14 @@ const Demopage = () => {
 
     return (
         <div className="min-h-screen bg-cyan-600 py-6 flex flex-col sm:py-12">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center">
                 <div className="w-full md:w-1/2 text-center md:text-left mb-8 md:mb-0 px-4">
                     <h2 className="text-3xl font-extrabold text-gray-900">Schedule a Live Demo</h2>
-                    <p className="text-black-600 mt-4 text-2xl">
+                    <p className="text-black-600 mt-4 text-lg md:text-2xl">
                         Book a no-obligation demo with our experts and discover how Skill Lake can elevate your learning initiatives and grow your business.
                     </p>
                 </div>
-                <div className="w-full md:w-1/2 bg-white px-8 py-6 md:py-12 shadow-md rounded-lg">
+                <div className="w-full md:w-1/2 bg-white px-4 md:px-8 py-6 md:py-12 shadow-md rounded-lg">
                     <form onSubmit={handleSubmit}>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="mb-4">
@@ -24,9 +24,7 @@ const Demopage = () => {
                                     type="text"
                                     id="name"
                                     name="name"
-                                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                                    required
-                                />
+                                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"required/>
                             </div>
                             <div className="mb-4">
                                 <label htmlFor="company" className="block text-sm font-medium text-gray-700">Company *</label>
@@ -34,9 +32,7 @@ const Demopage = () => {
                                     type="text"
                                     id="company"
                                     name="company"
-                                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                                    required
-                                />
+                                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required/>
                             </div>
                             <div className="mb-4">
                                 <label htmlFor="job-title" className="block text-sm font-medium text-gray-700">Job Title *</label>
@@ -44,9 +40,7 @@ const Demopage = () => {
                                     type="text"
                                     id="job-title"
                                     name="job-title"
-                                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                                    required
-                                />
+                                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"required/>
                             </div>
                             <div className="mb-4">
                                 <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email Address *</label>
@@ -54,9 +48,7 @@ const Demopage = () => {
                                     type="email"
                                     id="email"
                                     name="email"
-                                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                                    required
-                                />
+                                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"required/>
                             </div>
                             <div className="mb-4">
                                 <label htmlFor="phone" className="block text-sm font-medium text-gray-700">Phone Number *</label>
@@ -64,19 +56,18 @@ const Demopage = () => {
                                     type="tel"
                                     id="phone"
                                     name="phone"
-                                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                                    required
-                                />
+                                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"required/>
                             </div>
                             <div className="mb-4">
-                                <label htmlFor="employees" className="block text-sm font-medium text-gray-700">Number of Employees</label>
-                                <input
-                                    type="number"
-                                    id="employees"
-                                    name="employees"
-                                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                                />
-                            </div>
+                             <label htmlFor="employees" className="block text-sm font-medium text-gray-700">Number of Employees</label>
+                            <input
+                            type="number"
+                            id="employees"
+                            name="employees"
+                            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                             min="0"/>
+                           </div>
+
                         </div>
                         <div className="mb-6">
                             <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
@@ -84,8 +75,7 @@ const Demopage = () => {
                                 id="message"
                                 name="message"
                                 rows="4"
-                                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                            ></textarea>
+                                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"></textarea>
                         </div>
                         <div className="text-center">
                             <button
